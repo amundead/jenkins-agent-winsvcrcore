@@ -1,5 +1,5 @@
 {
-    "docker.host": "tcp://172.26.10.60:2376",
+    "docker.host": "tcp://172.26.10.00:2376",
     "docker.tlsVerify": true,
-    "docker.certPath": "D:/Cloud/Server/CsERT MOD/Cert Docker/TLS-Docker-Win"
+    "docker.certPath": "D:/Cloud/Server/CERT MOD/Cert Docker/TLS-Docker-Win"
 }
