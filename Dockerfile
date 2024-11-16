@@ -16,5 +16,6 @@ RUN powershell -Command \
 RUN powershell -Command \
     "Invoke-WebRequest -Uri https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe -OutFile C:\\Windows\\System32\\kubectl.exe"
 
-# Set the command to start the Jenkins agent
-CMD ["powershell", "-Command", "java -jar C:\\ProgramData\\Jenkins\\agent.jar"]
+# Override the CMD with the correct initialization command
+CMD ["powershell", "-NoProfile", "-NonInteractive", "-File", "C:\\ProgramData\\Jenkins\\jenkins-agent.ps1"]
+
