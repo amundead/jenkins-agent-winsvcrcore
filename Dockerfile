@@ -18,4 +18,3 @@ RUN powershell -Command \
 
 # Override the CMD with the correct initialization command
 CMD ["powershell", "-NoProfile", "-NonInteractive", "-File", "C:\\ProgramData\\Jenkins\\jenkins-agent.ps1"]
-
