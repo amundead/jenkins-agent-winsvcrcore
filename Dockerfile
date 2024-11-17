@@ -9,7 +9,7 @@ RUN powershell -Command \
      [System.Environment]::SetEnvironmentVariable('PATH', $Env:PATH + ';C:\\docker', [System.EnvironmentVariableTarget]::Machine)"
 
 # Set PATH to include Docker CLI
-ENV PATH="C:\\docker;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+ENV PATH="C:\\docker\\docker;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
 
 # Install jq
 RUN powershell -Command \
