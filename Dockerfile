@@ -8,6 +8,9 @@ RUN powershell -Command \
      Remove-Item -Force docker.zip; \
      [System.Environment]::SetEnvironmentVariable('PATH', $Env:PATH + ';C:\\docker', [System.EnvironmentVariableTarget]::Machine)"
 
+# Set PATH to include Docker CLI
+ENV PATH="C:\\docker;${PATH}"
+
 # Install jq
 RUN powershell -Command \
     "Invoke-WebRequest -Uri https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe -OutFile C:\\Windows\\System32\\jq.exe"
