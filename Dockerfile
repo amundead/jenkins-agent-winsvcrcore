@@ -3,7 +3,7 @@ FROM jenkins/inbound-agent:windowsservercore-ltsc2019
 
 # Install Docker CLI
 RUN powershell -Command \
-    "Invoke-WebRequest -Uri https://download.docker.com/win/static/stable/x86_64/docker-28.4.0.zip -OutFile docker.zip; \
+    "Invoke-WebRequest -Uri https://download.docker.com/win/static/stable/x86_64/docker-28.5.1.zip -OutFile docker.zip; \
      Expand-Archive -Path docker.zip -DestinationPath C:\\docker; \
      Remove-Item -Force docker.zip; \
      [System.Environment]::SetEnvironmentVariable('PATH', $Env:PATH + ';C:\\docker\\docker', [System.EnvironmentVariableTarget]::Machine)"
