@@ -15,5 +15,3 @@ RUN powershell -Command \
 # Install kubectl
 RUN powershell -Command \
     "Invoke-WebRequest -Uri https://dl.k8s.io/release/v1.34.0/bin/windows/amd64/kubectl.exe -OutFile C:\\Windows\\System32\\kubectl.exe"
-
-
